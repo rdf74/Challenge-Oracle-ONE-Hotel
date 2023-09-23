@@ -1,0 +1,3 @@
+Field 'IdReserva' doesn't have a default value
+	at DAO.HuespedesDAO.guardar(HuespedesDAO.java:49)
+	at controladores.huespedesControlador.guardar
