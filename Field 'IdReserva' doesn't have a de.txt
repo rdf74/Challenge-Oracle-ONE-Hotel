@@ -1,3 +1,8 @@
 Field 'IdReserva' doesn't have a default value
 	at DAO.HuespedesDAO.guardar(HuespedesDAO.java:49)
 	at controladores.huespedesControlador.guardar
+
+
+
+Exception in thread "AWT-EventQueue-0" java.lang.RuntimeException: java.sql.SQLException: Parameter index out of range (7 > number of parameters, which is 6).
+	at DAO.HuespedesDAO.Actualizar(HuespedesDAO.java:108)

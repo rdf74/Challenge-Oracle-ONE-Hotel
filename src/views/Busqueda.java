@@ -278,7 +278,6 @@ public class Busqueda extends JFrame {
 				}
 				else if (filaHuespedes >=0){
 					actualizarHuespedes();
-					System.out.println("eres imbecil");
 					eliminarTabla();
 					mostrarTablaHuespedes();
 					mostrarTablaReservas();
@@ -313,7 +312,7 @@ public class Busqueda extends JFrame {
 					if(confirmar == JOptionPane.YES_OPTION) {
 						String valor = tbReservas.getValueAt(filaReservas, 0).toString();
 						reservasControl.Eliminar(Integer.valueOf(valor));
-						JOptionPane.showMessageDialog(contentPane, "Reserva borrada");
+						JOptionPane.showMessageDialog(contentPane, "Reserva borrada con exito");
 						eliminarTabla();
 
 						mostrarTablaHuespedes();
@@ -331,13 +330,13 @@ public class Busqueda extends JFrame {
 					if(confirmaH == JOptionPane.YES_OPTION) {
 						String valor = tbHuespedes.getValueAt(filaHuespedes, 0).toString();
 						huespedesControl.Eliminar(Integer.valueOf(valor));
-						JOptionPane.showMessageDialog(contentPane, "Huesped borrada");
+						JOptionPane.showMessageDialog(contentPane, "Huesped borrado");
 						eliminarTabla();
 						mostrarTablaHuespedes();
 						mostrarTablaReservas();
 					}
 				}else {
-					JOptionPane.showMessageDialog(null, "hubo un error");
+					JOptionPane.showMessageDialog(null, "hubo un error al eliminar");
 				}
 			}
 		});
@@ -480,11 +479,14 @@ public class Busqueda extends JFrame {
 	    		String nacionalidad = (String) modeloH.getValueAt(tbHuespedes.getSelectedRow(), 4);
 	    		String telefono = (String) modeloH.getValueAt(tbHuespedes.getSelectedRow(), 5);
 	    		Integer id_reserva = Integer.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(),6).toString());
-	    		Integer id = Integer.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(),7).toString());
-
+	    		Integer id= Integer.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(), 0).toString());
 	    		
-	    		this.huespedesControl.actualizar(nombre, apellido, fechaNacimiento, nacionalidad, telefono, id_reserva, id);
-	    		JOptionPane.showMessageDialog(this, String.format("Registro Modificado con exito"));
+	    		if(tbHuespedes.getSelectedColumn() == 0 || tbHuespedes.getSelectedColumn() == 6) {
+	    			JOptionPane.showMessageDialog(this, "No se pueden modificar los id");
+	    		}else {
+	    			this.huespedesControl.actualizar(nombre, apellido, fechaNacimiento, nacionalidad, telefono, id_reserva, id);
+		    		JOptionPane.showMessageDialog(this, String.format("Registro Modificado con exito"));
+	    		}
 	    		
 	    	}, ()-> JOptionPane.showMessageDialog(this, "Porfavor"));
 	    
