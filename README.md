@@ -28,9 +28,9 @@ Se incluye un respaldo de la base de datos en el proyecto para poder probarlo.
 Dentro de la clase conexionBase se encuentran los ajustes para la ruta / usuario y contraseña para la configuracion de la conexion a la base de datos MySQL.
 
 ## Menu Principal 
-![image]()
+<img width="689" alt="Menu principal" src="https://github.com/rdf74/Challenge-Oracle-ONE-Hotel/assets/130192004/6029fb4d-8b4d-49f2-b7de-f06c75b14017">
 ## Ventana para el registro de reservas
-![image]()
+
 
 Los campos FECHA DE CHECK IN y FECHA DE CHECK OUT se utiliza JCalendar
 son combobox con los datos predefinidos
