@@ -22,6 +22,13 @@ public class HuespedesDAO {
 	}
 	
 	public void guardar(Huespedes huespedes) {
+		System.out.println(huespedes.getNombre());
+		System.out.println(huespedes.getApellido());
+		System.out.println(huespedes.getFechaNacimiento());
+		System.out.println(huespedes.getNacionalidad());
+		System.out.println(huespedes.getTelefono());
+		System.out.println(huespedes.getId_reserva());
+
 		try {
 			String sql = "INSERT INTO huespedes (nombre,apellido,fecha_nacimiento,nacionalidad,telefono,id_reserva) VALUES(?,?,?,?,?,?)";
 			try(PreparedStatement pstm = conexion.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
@@ -30,7 +37,7 @@ public class HuespedesDAO {
 				pstm.setDate(3, huespedes.getFechaNacimiento());
 				pstm.setString(4, huespedes.getNacionalidad());
 				pstm.setString(5, huespedes.getTelefono());
-				pstm.setInt(6, huespedes.getIdReserva());
+				pstm.setInt(6, huespedes.getId_reserva());
 				pstm.execute();
 				
 				try(ResultSet rst = pstm.getGeneratedKeys()){
@@ -95,7 +102,7 @@ public class HuespedesDAO {
 	} 
 	
 	public void Actualizar(String nombre, String apellido, Date fechaNacimiento, String nacionalidad, String telefono, Integer id_reserva,Integer id) {
-		try (PreparedStatement stm = conexion.prepareStatement("UPDATE huespedes SET nombre=? , apellido=?, fecha_nacimiento=?, nacionalidad telefono=?, id_reserva=? WHERE  id= ?")) {
+		try (PreparedStatement stm = conexion.prepareStatement("UPDATE huespedes SET nombre=? , apellido=?, fecha_nacimiento=?, nacionalidad=?, telefono=?, id_reserva=? WHERE  id= ?")) {
 			stm.setString(1, nombre);
 			stm.setString(2, apellido);
 			stm.setDate(3, fechaNacimiento);

@@ -102,7 +102,7 @@ public class Busqueda extends JFrame {
 		
 		JLabel lblNewLabel_4 = new JLabel("SISTEMA DE BÚSQUEDA");
 		lblNewLabel_4.setForeground(new Color(12, 138, 199));
-		lblNewLabel_4.setFont(new Font("Roboto Black", Font.BOLD, 24));
+		lblNewLabel_4.setFont(new Font("Dialog", Font.BOLD, 22));
 		lblNewLabel_4.setBounds(331, 62, 280, 42);
 		contentPane.add(lblNewLabel_4);
 		
@@ -429,7 +429,7 @@ public class Busqueda extends JFrame {
 				for (Huespedes huespedes1 : huespedes ) {
 					modeloH.addRow(new Object[] {
 							huespedes1.getId(), huespedes1.getNombre(), huespedes1.getApellido(),
-							huespedes1.getFechaNacimiento(), huespedes1.getNacionalidad(), huespedes1.getTelefono(),huespedes1.getIdReserva()
+							huespedes1.getFechaNacimiento(), huespedes1.getNacionalidad(), huespedes1.getTelefono(),huespedes1.getId_reserva()
 					});
 				}
 			} catch (Exception e) {
@@ -445,7 +445,7 @@ public class Busqueda extends JFrame {
 				for (Huespedes huespedes1 : huespedes ) {
 					modeloH.addRow(new Object[] {
 							huespedes1.getId(), huespedes1.getNombre(), huespedes1.getApellido(),
-							huespedes1.getFechaNacimiento(), huespedes1.getNacionalidad(), huespedes1.getTelefono(),huespedes1.getIdReserva()
+							huespedes1.getFechaNacimiento(), huespedes1.getNacionalidad(), huespedes1.getTelefono(),huespedes1.getId_reserva()
 					});
 				}
 			} catch (Exception e) {

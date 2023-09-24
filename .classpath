@@ -6,9 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="JARS/c3p0-0.9.5.4.jar"/>
-	<classpathentry kind="lib" path="JARS/jcalendar-1.4.jar"/>
-	<classpathentry kind="lib" path="JARS/mchange-commons-java-0.2.16.jar"/>
-	<classpathentry kind="lib" path="JARS/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="resources/JARS/c3p0-0.9.5.4.jar"/>
+	<classpathentry kind="lib" path="resources/JARS/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="resources/JARS/mchange-commons-java-0.2.16.jar"/>
+	<classpathentry kind="lib" path="resources/JARS/mysql-connector-java-8.0.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,54 +1,40 @@
-# Challenge-Oracle-ONE-Hotel
-Aplicación de escritorio que permite la gestión de reservas para un hotel. 
-Permite al usuario registrar, consultar, editar y eliminar los datos de los huéspedes.
+# Challenge-Oracle-ONE-Hotel-Alura
+Aplicación de escritorio para realizar la gestión de reservas para un hotel. 
+Permite al usuario registrar, consultar, editar y eliminar los datos de una base de datos con dos tablas. Una de reservas y la otra de huespedes.
 
 
-## ⚒ Tecnologías Utilizadas:
+## 🖥️  Tecnologías Utilizadas:
 
 - Java
 - Eclipse
-- Biblioteca JCalendar
-- MySql
+- Biblioteca JCalendar - jcalendar-1.4
+- JDBC - mchange-commons-java-0.2.16
+- Pool de conexiones JDBC - c3p0-0.9.5.4
+- Controlador JDBC de MySql - mysql-connector-java-8.0.17
 - Plugin WindowBuilder
 
-## Características
-- Sistema de login de usuario
-- CRUD para la entidades "Húesped", "Reserva" y "Usuario"
+## 📁 Acceso al proyecto
 
-## Descargar e Inicio
+**Accede al código fuente del proyecto, https://github.com/rdf74/Challenge-Oracle-ONE-Hotel.git**
 
-</br>Deberan crear una base de datos, a continuacion la sentencia en SQL para la creacion de la misma:
+## 🛠️ Abre y ejecuta el proyecto
 
-CREATE DATABASE hotel_alura_ONE;
+**Para abrir y ejecutar el proyecto abrir la clase Main y luego Run**
 
-use hotel_alura_ONE;
+Se incluye un respaldo de la base de datos en el proyecto para poder probarlo. 
 
-CREATE TABLE reservas(
-id INT not null auto_increment,
-fecha_entrada DATE not null,
-fecha_salida DATE not null,
-valor VARCHAR(50),
-forma_de_pago VARCHAR(50)not null,
-PRIMARY KEY(id)
-);
 
-CREATE TABLE huespedes(
-id INT not null auto_increment,
-nombre VARCHAR(50)not null,
-apellido VARCHAR(50)not null,
-fecha_nacimiento DATE not null,
-nacionalidad VARCHAR(50)not null,
-telefono VARCHAR(50)not null,
-id_reserva INT not null,
-PRIMARY KEY (id),
-FOREIGN KEY (id_reserva) REFERENCES reservas(id)
-);
+![image]()
+Dentro de la clase conexionBase se encuentran los ajustes para la ruta / usuario y contraseña para la configuracion de la conexion a la base de datos MySQL.
 
-CREATE TABLE usuarios(
-nombre VARCHAR(50),
-contraseña VARCHAR(50)
-);
+## Menu Principal 
+![image]()
+## Ventana para el registro de reservas
+![image]()
 
-INSERT INTO usuarios (nombre,contraseña) VALUES('admin','admin')</br>
-
-Una vez configurado todo, podran darle ReBuild a su proyecto e iniciarlo en su IDE o realizar su JAR correspondiente.
+Los campos FECHA DE CHECK IN y FECHA DE CHECK OUT se utiliza JCalendar
+son combobox con los datos predefinidos
+## Menu de busqueda 
+![image]()
+## Ventana consulta de reservaciones 
+![image]()

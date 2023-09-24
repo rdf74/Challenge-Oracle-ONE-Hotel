@@ -9,20 +9,20 @@ public class Huespedes {
 	private Date fechaNacimiento;
 	private String nacionalidad;
 	private String telefono;
-	private Integer idReserva;
+	private Integer id_reserva;
 	
-	public Huespedes(String nombre, String apellido, Date fechaNacimiento, String nacionalidad, String telefono, Integer idReserva) {
+	public Huespedes(String nombre, String apellido, Date fechaNacimiento, String nacionalidad, String telefono, Integer id_reserva) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.fechaNacimiento = fechaNacimiento;
 		this.nacionalidad= nacionalidad;
 		this.telefono=telefono;
-		this.idReserva=idReserva;
+		this.id_reserva=id_reserva;
 	}
 	
 	public Huespedes(Integer id,String nombre, String apellido, Date fechaNacimiento, 
-			String nacionalidad, String telefono, Integer idReserva) {
+			String nacionalidad, String telefono, Integer id_reserva) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -30,7 +30,7 @@ public class Huespedes {
 		this.fechaNacimiento = fechaNacimiento;
 		this.nacionalidad= nacionalidad;
 		this.telefono=telefono;
-		this.idReserva=idReserva;
+		this.id_reserva=id_reserva;
 	}
 	
 	
@@ -86,12 +86,12 @@ public class Huespedes {
 		this.telefono = telefono;
 	}
 
-	public Integer getIdReserva() {
-		return idReserva;
+	public Integer getId_reserva() {
+		return id_reserva;
 	}
 
-	public void setIdReserva(Integer idReserva) {
-		this.idReserva = idReserva;
+	public void setId_reserva(Integer id_reserva) {
+		this.id_reserva = id_reserva;
 	}
 
 }
