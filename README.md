@@ -24,7 +24,8 @@ Permite al usuario registrar, consultar, editar y eliminar los datos de una base
 Se incluye un respaldo de la base de datos en el proyecto para poder probarlo. 
 
 
-![image]()
+![image](![DB](https://github.com/rdf74/Challenge-Oracle-ONE-Hotel/assets/130192004/31adf81c-2cac-4d22-9aa4-59ccd110cb8d)
+)
 Dentro de la clase conexionBase se encuentran los ajustes para la ruta / usuario y contraseña para la configuracion de la conexion a la base de datos MySQL.
 
 ## Menu Principal 
